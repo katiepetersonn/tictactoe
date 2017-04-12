@@ -19,19 +19,24 @@
 $(document).ready (function () {
 
   var player = 1;
+  var count= 0;
+
   $(".box").one("click", function () {
     $(this).addClass("animated flipInX");
       console.log(this);
     if(player === 1){
       $(this).text("O");
       $("#whoseGo").text("twos ");
-     player = 2;
+      player = 2;
+      count += 1;
     } else {
      $(this).text("X");
      $("#whoseGo").text("ones ");
      player = 1;
+     count += 1;
    }
   });
+
 
 var playerOneWins = function () {
   window.setTimeout( function () {
@@ -40,7 +45,7 @@ var playerOneWins = function () {
           text: "You are a legend!",
           closeOnConfirm: true,
           timer: 5000
-      })}, 1000);
+      });}, 1000);
 };
 
 var playerTwoWins = function () {
@@ -50,7 +55,7 @@ var playerTwoWins = function () {
         text: "You are a superstar!",
         closeOnConfirm: true,
         timer: 5000
-    })}, 1000);
+    });}, 1000);
 };
 
 //if all boxes in a row ===  X
@@ -64,7 +69,7 @@ var playerTwoWins = function () {
       playerOneWins();
     } else if ($("#box1").text() === "X" && $("#box2").text() === "X" && $("#box3").text() === "X") {
       playerTwoWins();
-  };
+  }
 });
 
 //second row win
@@ -74,7 +79,7 @@ var playerTwoWins = function () {
       playerOneWins();
   } else if ($("#box4").text() === "X" && $("#box5").text() === "X" && $("#box6").text() === "X") {
     playerTwoWins();
-  };
+  }
   });
 
 //third row win
@@ -84,7 +89,7 @@ var playerTwoWins = function () {
       playerOneWins();
   } else if ($("#box7").text() === "X" && $("#box8").text() === "X" && $("#box9").text() === "X") {
     playerTwoWins();
-  };
+  }
   });
 
 
@@ -100,7 +105,7 @@ var playerTwoWins = function () {
       playerOneWins();
   } else if ($("#box1").text() === "X" && $("#box4").text() === "X" && $("#box7").text() === "X") {
     playerTwoWins();
-  };
+  }
   });
 
 //second column win
@@ -110,7 +115,7 @@ var playerTwoWins = function () {
       playerOneWins();
   } else if ($("#box2").text() === "X" && $("#box5").text() === "X" && $("#box8").text() === "X") {
       playerTwoWins();
-  };
+  }
   });
 
 //third column win
@@ -120,7 +125,7 @@ var playerTwoWins = function () {
       playerOneWins();
   }  else if ($("#box3").text() === "X" && $("#box6").text() === "X" && $("#box9").text() === "X") {
       playerTwoWins();
-  };
+  }
   });
 
 //if all boxes in a diagonal === X
@@ -135,7 +140,7 @@ var playerTwoWins = function () {
       playerOneWins();
   } else if ($("#box3").text() === "X" && $("#box5").text() === "X" && $("#box7").text() === "X") {
     playerTwoWins();
-  };
+  }
   });
 
 //left diagonal win
@@ -145,7 +150,9 @@ var playerTwoWins = function () {
       playerOneWins();
   } else if ($("#box1").text() === "X" && $("#box5").text() === "X" && $("#box9").text() === "X") {
       playerTwoWins();
-  };
+  } else if (count === 9) {
+    swal("Its a tie!");
+  }
   });
 
 //reset board
