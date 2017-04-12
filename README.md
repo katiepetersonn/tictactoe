@@ -42,3 +42,13 @@ Unsolved problems:
 //Would like to add a winner counter to keep track of multiple game rounds.
 //How to personalise the game, using customised tokens.
 //Support networked multiplayer.
+
+Lesson's learnt:
+
+//I originally had my files in the WDi21-homework folder, which meant I had to copy the files into a new folder to create a repository. The commits up until that point at in the WDi21-homework folder and then the commits after are in the repo folder.
+
+//Break the task down into the smallest possible chunks, work through the pseudo-code and then tackle it bit by bit. Build one thing and then move on. 
+
+//Start with the logic first.
+
+//Build a working product and then go back and try to refactor the code to make it DRY.
