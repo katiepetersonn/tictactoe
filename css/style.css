@@ -21,6 +21,17 @@ td {
   color: #FABCAF;
 }
 
+p{
+  text-align: center;
+  color: #F75C48;
+}
+
+.scoreCounter {
+  width: 200px;
+  margin: auto;
+  border: none;
+}
+
 .board {
   margin: auto;
   border: none;
@@ -45,4 +56,9 @@ td {
 
 .reset:hover {
   font-size: 30px;
+}
+
+.scoreCounter {
+  border: 2px dashed #F75C48;
+
 }

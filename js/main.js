@@ -20,6 +20,8 @@ $(document).ready (function () {
 
   var player = 1;
   var count= 0;
+  var playerOneScore= 0;
+  var playerTwoScore= 0;
 
   $(".box").one("click", function () {
     $(this).addClass("animated flipInX");
@@ -30,10 +32,10 @@ $(document).ready (function () {
       player = 2;
       count += 1;
     } else {
-     $(this).text("X");
-     $("#whoseGo").text("ones ");
-     player = 1;
-     count += 1;
+       $(this).text("X");
+       $("#whoseGo").text("ones ");
+       player = 1;
+       count += 1;
    }
   });
 
@@ -46,6 +48,8 @@ var playerOneWins = function () {
           closeOnConfirm: true,
           timer: 5000
       });}, 1000);
+      playerOneScore += 1;
+      $("#scoreCountOne").html(playerOneScore);
 };
 
 var playerTwoWins = function () {
@@ -56,6 +60,8 @@ var playerTwoWins = function () {
         closeOnConfirm: true,
         timer: 5000
     });}, 1000);
+    playerTwoScore += 1;
+    $("#scoreCountTwo").html(playerTwoScore);
 };
 
 //if all boxes in a row ===  X
@@ -159,6 +165,7 @@ var playerTwoWins = function () {
 
 $(".reset").on("click", function ()  {
     $("td").empty();
+    
     window.location.reload(true);
 });
 
