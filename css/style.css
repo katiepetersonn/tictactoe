@@ -35,6 +35,7 @@ p{
 .board {
   margin: auto;
   border: none;
+  position: relative;
 }
 
 .column1, .column2, .column3 {
@@ -60,5 +61,15 @@ p{
 
 .scoreCounter {
   border: 2px dashed #F75C48;
+  display: inline-block;
+  position: absolute;
+  top: 220px;
+  left: 60px;
+  float: left;
+  padding-bottom: 20px;
+  padding: 15px;
+}
 
+.clear {
+  clear: both;
 }
