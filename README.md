@@ -18,6 +18,7 @@ HTML:
 //Created a index.html. Added necessary HTML tags, including script and link tags to link the JavaScript and CSS respectively, ensured these were connected using console.log and changing the body background.
 // Constructed a "gameboard" using the table tag, so it displayed a 3x3 grid. Used id's so I could target the individual boxes.
 // Added a "reset" button.
+//Styled the scoreCounter, using position absolute and positioning from the top.
 
 JavaSript:
 
@@ -26,6 +27,7 @@ JavaSript:
 //Determined the winning combinations and used if/ else statements to log these out.
 //After the necessary moves have been played, check those combinations, and alert the winner if one player ends up winning with three in a row/column or diagonal.
 //Display a message to indicate which turn is about to be played.
+//Added the scoreCounter, which resulted in wrapping the click event and the winning combinations in a function so I could call them from the reset counter.  
 
 CSS:
 
@@ -47,7 +49,7 @@ Lesson's learnt:
 
 //I originally had my files in the WDi21-homework folder, which meant I had to copy the files into a new folder to create a repository. The commits up until that point at in the WDi21-homework folder and then the commits after are in the repo folder.
 
-//Break the task down into the smallest possible chunks, work through the pseudo-code and then tackle it bit by bit. Build one thing and then move on. 
+//Break the task down into the smallest possible chunks, work through the pseudo-code and then tackle it bit by bit. Build one thing and then move on.
 
 //Start with the logic first.
 
