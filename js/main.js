@@ -104,7 +104,6 @@ var checkForWin = function () {
     }
     });
 
-
   //if all boxes in a column === X
         //then playerOne wins
       //Else if all boxes in a column equal 0
@@ -171,18 +170,10 @@ var checkForWin = function () {
 
 checkForWin();
 
-
 //reset board
 
 $(".reset").on("click", function ()  {
     $("td").empty();
-
-    // We know that the win is based on the text in each box
-      // We need to reset the text
-    // We know that a lot of elements had click event handlers on them, we don't these to run twice
-      // Turn off all of the old event handlers, so each element only has one
-    // Re-add the event handlers
-
       $(".box").text('');
       $(".box").removeClass("animated flipInX");
       $(".box").off();
@@ -191,6 +182,5 @@ $(".reset").on("click", function ()  {
       count = 0;
     });
 
-    //window.location.reload(true);
 
  }); //doc.ready end of

@@ -41,7 +41,6 @@ CSS:
 
 Unsolved problems:
 
-//Would like to add a winner counter to keep track of multiple game rounds.
 //How to personalise the game, using customised tokens.
 //Support networked multiplayer.
 
